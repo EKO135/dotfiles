@@ -142,7 +142,6 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # #---Function Buttons---# # //LukeSmith
-bindsym $mod+F1		exec --no-startup-id groff -mom ~/.local/share/larbs/readme.mom -Tpdf | zathura -
 bindsym $mod+F2		restart
 bindsym $mod+F3		exec --no-startup-id displayselect
 bindsym $mod+F4		exec --no-startup-id prompt "Hibernate computer?" "$hibernate"
@@ -211,12 +210,10 @@ client.urgent 		$urgent-bg-color    $urgent-bg-color   $text-color 	    #00ff00
 # hide the crappy green line and terminal borders
 hide_edge_borders both
 
-# give my terminal workspace gaps of 10x20pxls
-#workspace $ws2 gaps inner 15 #10
-#workspace $ws2 gaps outer 15 #20
 
 # // #### gaps #### // #
 
+# give my terminal workspace gaps of 15x20pxls
 gaps inner 15
 gaps outer 20
 
@@ -258,10 +255,6 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-
-
-# give my 10th workspace outer gaps, spotify, youtube, rythmbox
-#workspace $ws10 gaps outer 15 #20
 
 bar {
         status_command i3blocks -c /home/ethan/.config/i3/i3blocks.conf
@@ -313,15 +306,15 @@ bindsym $mod+shift+Print exec xfce4-screenshooter -r -o "xclip -selection clipbo
 bindsym $mod+Print exec xfce4-screenshooter -f -o "xclip -selection clipboard -t image/png"
 
 # for functionality
-bindsym $mod+y exec firefox # idk maybe youtube or somn
+bindsym $mod+y exec firefox # idk maybe youtube or som'n
 bindsym $mod+n exec nautilus #'n' for nautilus
-bindsym $mod+c exec discord #'c' for dis'c'ord
+bindsym $mod+c exec discord #'c' for chat
 bindsym $mod+m exec com.spotify.Client #'m' for music
-bindsym $mod+p exec notepadqq #'p' for notePAD
+bindsym $mod+p exec notepadqq #'p' for notepad
 bindsym $mod+t exec org.telegram.desktop #'t' for telegram
 bindsym $mod+g exec org.gimp.GIMP #'g' for GIMP
 bindsym $mod+Shift+w exec lmms # 'w' for workstation
-#bindsym $mod+Shift+m /home/ethan/Desktop/thunderbird
+#bindsym $mod+Shift+m exec /home/ethan/Desktop/thunderbird
 
 ### extra ###
 
@@ -336,7 +329,7 @@ bindsym $mod+d exec /home/ethan/.config/i3/rofiscript.sh
 
 exec_always feh --bg-scale /home/ethan/Pictures/backgrounds/bg7.jpg
 
-# change background on key (just press mod+shift+r after)
+# change background on key (just press mod+shift+r after) # dosen't fu*king work
 bindsym $mod+Shift+F1 exec_always feh --bg-scale /home/ethan/Pictures/backgrounds/bg.jpg
 bindsym $mod+Shift+F2 exec_always feh --bg-scale /home/ethan/Pictures/backgrounds/bg2.jpg
 bindsym $mod+Shift+F3 exec_always feh --bg-scale /home/ethan/Pictures/backgrounds/bg3.jpg
@@ -359,8 +352,10 @@ assign [class="Wireshark"] $ws8
 bindsym $mod+shift+f exec urxvt -name floating
 for_window [class="URxvt" instance="floating"] floating enable
 
+# change monitor position
 exec_always rarandr --output LVDS-1 --primary --mode 1366x768 --pos 0x202 --rotate normal --output VGA-1 --off --output HDMI-1 --mode 1920x1080 --pos 1366x0 --rotate normal --output DP-1 --of
 
+# things for startup
 exec compton -f
 exec xfce4-clipman
 exec python3 /home/ethan/dev/python/voicerec/vr5.py #my https://github.com/EKO135/Desktop-Assistant/
