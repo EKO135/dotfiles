@@ -353,9 +353,8 @@ bindsym $mod+shift+f exec urxvt -name floating
 for_window [class="URxvt" instance="floating"] floating enable
 
 # change monitor position
-exec_always rarandr --output LVDS-1 --primary --mode 1366x768 --pos 0x202 --rotate normal --output VGA-1 --off --output HDMI-1 --mode 1920x1080 --pos 1366x0 --rotate normal --output DP-1 --of
-
+exec_always xrandr --output LVDS1 --primary --mode 1366x768 --pos 0x202 --rotate normal --output HDMI1 --mode 1920x1080 --pos 1366x0 --rotate normal
 # things for startup
 exec compton -f
 exec xfce4-clipman
-exec python3 /home/ethan/dev/python/voicerec/vr5.py #my https://github.com/EKO135/Desktop-Assistant/
+#exec python3 /home/ethan/dev/python/voicerec/vr5.py #my https://github.com/EKO135/Desktop-Assistant/
