@@ -3,7 +3,8 @@ export ZSH="/home/ethan/.oh-my-zsh"
 
 
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+# change from agnoster because its dumb and fancy
+ZSH_THEME="maran"
 
 alias tmux="TERM=screen-256color-bce tmux"
 alias vf="vim \$(fzf -i --preview='head -100 {}')"
