@@ -33,4 +33,4 @@ or if your lazy watch the 'i3' and 'urxvt' playlists from code case
 
 
 
-###### ps this is just for future me bc i make a lot of new distros.
+###### i dont really expect anyone else but me using this but... enjoy!!
