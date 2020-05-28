@@ -12,13 +12,16 @@ $: sudo apt-get install $(grep -vE "^\s*#" pkglist.txt  | tr "\n" " ")
 p.s. if u have any other distro u silly
 ```
 
+
 ### installing fonts
 make a fonts folder with this `mkdir ~/.fonts` and move `DejaVu Sans Mono for Powerline 8` to it
 
 if you want you can get the fontawesome icons / fonts. important: follow documentation
 
+
 ### adding config
 edit `~/.config/i3/config` and paste my config into that file
+
 
 ### making it yours
 to stop errors and have an actually working config go and edit all the directories with my usr to yours
