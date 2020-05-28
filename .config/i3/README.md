@@ -1,4 +1,4 @@
-# stuff
+# make i3 look kinda shmexy
 
 ### installing needed packages
 first install all the needed packages for the i3 config with:
