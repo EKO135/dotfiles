@@ -1,8 +1,14 @@
-# run "pacman -S - < pkglist.txt" to install
+feh
+rofi
 xorg
 xterm
-rofi
-feh
-rxvt-unicode
+thunar
 termite
-font pango: DejaVu Sans Mono for Powerline 8
+firefox
+compton
+nautilus
+playerctl
+rxvt-unicode
+xfce4-clipman
+xfce4-screenshot
+gnome-screenshooter
